@@ -14,5 +14,29 @@ Given a version number **MAJOR.MINOR.PATCH**, increment the:
 - **PATCH** version when you make backward compatible bug fixes
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
+## Install Terraform CLI
 
+The terraform CLI installation instruction
 
+[Install Terraform CLI] (https://developer.hashicorp.com/terraform/install)
+
+## Considerations for Linux Distribution
+
+This project is buit against Ubuntu. Check your Linux Distribution by typing [cat /etc/os-release] in the terminal.
+
+## Refactoring into Bash Scripts
+
+Whilte fixing the terraforM CLI we notice that the scripts (.gitpod.yml) steps were shorter so we created a new installation bash script. 
+
+## Shebang
+
+Don't forget to put shebang (#!/bin/bash) at the beginning of the file to run the script.
+
+## Linux Permissions Considerations
+
+To execute our bash script we need eto change permissions as follow in the terminal :
+chmod u+x ./bin/install_terraform_cli 
+
+## Github Lifecycle
+
+Change init with before in the gitpod.yaml file to re-run when restarting a workspace
