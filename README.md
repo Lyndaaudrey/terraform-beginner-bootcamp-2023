@@ -40,3 +40,14 @@ chmod u+x ./bin/install_terraform_cli
 ## Github Lifecycle
 
 Change init with before in the gitpod.yaml file to re-run when restarting a workspace
+
+## Working with Env Vars 
+
+List all env vars usint 'env' command
+We can also filter by using 'env| grep AWS_'
+
+## Setting and Unsetting Env Vars 
+
+In the terminal we can set using 'export HELLO ='world''
+In the terminal we can unset using 'unset HELLO' 
+
