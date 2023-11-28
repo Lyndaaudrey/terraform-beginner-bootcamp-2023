@@ -40,3 +40,28 @@ chmod u+x ./bin/install_terraform_cli
 ## Github Lifecycle
 
 Change init with before in the gitpod.yaml file to re-run when restarting a workspace
+
+## Issues with terraform Cloud Login and Gitpod Workspace
+Probleme when trying to run terraform login.
+To fix this you have manually generate the token in terraformc cloud at this address:
+```
+https://app.terraform.io/app/settings/tokens?source=terraform-login
+```
+
+ Then create and open the file manually here :
+```sh
+ touch /home/gitpod/.terraform.d/credentials.tfrc.json 
+ open /home/gitpod/.terraform.d/credentials.tfrc.json
+```
+ Provide the following code (replace your token in the file):
+ 
+ ```json
+ {
+    "credentials":{
+        "app.terraform.io":{
+            "token": "Your-terraform-cloud-token"
+
+        }
+    }
+ }
+ ```

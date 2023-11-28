@@ -10,6 +10,13 @@ terraform {
       version = "5.26.0"
     }
   }
+  cloud {
+    organization = "Lynda_org"
+
+    workspaces {
+      name = "terra-house-1"
+    }
+  }
 }
 
 provider "random" {
